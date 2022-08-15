@@ -26,7 +26,7 @@ body {
 
 @media (min-width:600px) and (max-width: 767px) {
     .container {
-        width: 75%;
+        width: 65%;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -228,60 +228,53 @@ nav button img {
     padding: 60px 0px;
 }
 
-
-
 .about .img-box {
-    text-align: center;
     float: left;
-    width: 40%;
+    width: 35%;
     position: relative;
     top: 20px;
+    left: 20px;
 }
 
-.img-box .bg-border {
-    position: absolute;
-    left: 45%;
-    top: 45%;
-    transform: translate(-50%, -50%);
-    border: 7px solid #555555;
-    border-radius: 8px;
-    width: 90%;
+.about .img-box:hover .social-overlay {
     height: 100%;
+}
+
+.about .img-box .bg-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -20px;
+    top: -20px;
     z-index: -1;
-}
-
-.img-box .profile-photo {
-    position: relative;
-    margin: auto;
-    width: 90%;
+    border: 8px solid #555555;
     border-radius: 8px;
-    overflow: hidden;
 }
 
-.img-box .profile-photo>img {
+.about .img-box img.profile-img {
     width: 100%;
     display: block;
+    border-radius: 8px;
 }
 
 .about .img-box .social-overlay {
     position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    background-color: hsla(210, 2%, 23%, 0.76);
     width: 100%;
     height: 0%;
+    background-color: hsla(210, 2%, 23%, 0.76);
+    bottom: 0;
+    text-align: center;
     border-radius: 8px;
-    transition: .8s height;
-}
-
-.img-box .profile-photo:hover .social-overlay {
-    height: 100%;
+    transition: .5s;
+    overflow: hidden;
 }
 
 .about .img-box .social-overlay img {
     width: 60%;
-    transform: translateY(400%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .about .content {
@@ -310,8 +303,7 @@ nav button img {
 }
 
 .about .content .info {
-    margin: 20px 0px;
-
+    margin: 20px 0px 0px;
 }
 
 .about .content .info p {
@@ -362,7 +354,8 @@ nav button img {
 @media (max-width: 767px) {
     .about .img-box {
         width: 100%;
-        margin-bottom: 30px;
+        left: 0px;
+        margin-bottom: 50px;
     }
 
     .img-box .bg-border {
@@ -397,6 +390,7 @@ nav button img {
     width: 25%;
     transition: .5s all;
     margin-bottom: 20px;
+    padding: 40px 0px;
 }
 
 .service .box:hover {
@@ -421,7 +415,6 @@ nav button img {
 .service .box p {
     color: #555555;
     line-height: 1.5;
-    padding: 15px;
 }
 
 @media (max-width: 767px) {
@@ -563,7 +556,6 @@ nav button img {
     padding: 35px;
     border-radius: 10px;
     overflow: hidden;
-
 }
 
 .feedback .client-photo {
@@ -573,7 +565,7 @@ nav button img {
 }
 
 .feedback .client-photo .bg-red {
-    width:400px;
+    width: 400px;
     height: 200px;
     background-color: #ff305b;
     transform: rotate(-45deg);
