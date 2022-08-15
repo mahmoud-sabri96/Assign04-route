@@ -181,6 +181,7 @@ nav button img {
 .home .info {
     font-family: 'Source Sans Pro', sans-serif;
     position: absolute;
+    width: 100%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -219,7 +220,7 @@ nav button img {
     }
 
     .home .info h5 {
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 
@@ -415,6 +416,7 @@ nav button img {
 .service .box p {
     color: #555555;
     line-height: 1.5;
+    padding: 0px 10px;
 }
 
 @media (max-width: 767px) {
