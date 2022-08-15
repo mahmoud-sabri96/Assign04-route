@@ -1,0 +1,887 @@
+/* ===================================>>>>> Start General Rules <<<<<===============================*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (max-width:600px) {
+    .container {
+        width: 95%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width:600px) and (max-width: 767px) {
+    .container {
+        width: 75%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 90%;
+        margin: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.clr {
+    clear: both;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.main-title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.main-title h2 {
+    font-size: 33px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.main-title .underline span {
+    display: block;
+    height: 1px;
+    background-color: #ff305b;
+}
+
+.main-title .underline span:nth-child(2) {
+    width: 150px;
+    margin: 5px auto;
+}
+
+.main-title .underline span:nth-child(1),
+.main-title .underline span:nth-child(3) {
+    width: 50px;
+    margin: auto;
+}
+
+/* ===================================>>>>> Start Header <<<<<===============================*/
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 999999;
+    /* position: fixed; */
+    /* background-color: #000; */
+}
+
+nav {
+    color: white;
+    padding: 20px 0px;
+}
+
+nav .logo {
+    font-size: 24px;
+    color: #ff305b;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    color: white;
+    display: block;
+    margin-left: 10px;
+    padding: 7px;
+    transition: .4s;
+}
+
+nav ul li a:hover {
+    color: #ff305b;
+}
+
+nav button {
+    border: none;
+    float: right;
+    display: none;
+}
+
+nav button:hover+ul {
+    padding: 10px;
+    margin-top: 10px;
+    float: none;
+    display: block;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+nav button:hover+ul li {
+    float: none;
+}
+
+nav button img {
+    display: block;
+}
+
+/* from 0 to 767 */
+@media (max-width: 767px) {
+    nav button {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
+
+/* ===================================>>>>> Start Home Section <<<<<===============================*/
+.home {
+    background-image: url(imgs/slider-01.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #FFF;
+    position: relative;
+}
+
+
+
+.home .info {
+    font-family: 'Source Sans Pro', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home .info h2 {
+    font-size: 24px;
+    color: #FFF;
+}
+
+.home .info h3 {
+    color: #ff305b;
+    font-size: 65px;
+    margin: 15px 0px;
+
+}
+
+.home .info h5 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.home .info p span {
+    font-size: 35px;
+}
+
+@media (max-width: 767px) {
+    .home .info h2 {
+        font-size: 18px;
+    }
+
+    .home .info h3 {
+        font-size: 32px;
+        margin: 8px 0px;
+    }
+
+    .home .info h5 {
+        font-size: 12px;
+    }
+}
+
+/* ===================================>>>>> Start About Section <<<<<===============================*/
+.about {
+    padding: 60px 0px;
+}
+
+
+
+.about .img-box {
+    text-align: center;
+    float: left;
+    width: 40%;
+    position: relative;
+    top: 20px;
+}
+
+.img-box .bg-border {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    border: 7px solid #555555;
+    border-radius: 8px;
+    width: 90%;
+    height: 100%;
+    z-index: -1;
+}
+
+.img-box .profile-photo {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.img-box .profile-photo>img {
+    width: 100%;
+    display: block;
+}
+
+.about .img-box .social-overlay {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: hsla(210, 2%, 23%, 0.76);
+    width: 100%;
+    height: 0%;
+    border-radius: 8px;
+    transition: .8s height;
+}
+
+.img-box .profile-photo:hover .social-overlay {
+    height: 100%;
+}
+
+.about .img-box .social-overlay img {
+    width: 60%;
+    transform: translateY(400%);
+}
+
+.about .content {
+    width: 60%;
+    float: right;
+    padding-left: 20px;
+
+}
+
+.about .content .text {
+    border-bottom: 1px dashed #777;
+}
+
+.about .content .text h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 4px solid #ff305b;
+}
+
+.about .content .text p {
+    color: #555555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about .content .info {
+    margin: 20px 0px;
+
+}
+
+.about .content .info p {
+    margin-bottom: 20px;
+    color: #555555;
+}
+
+.about .content .info p span {
+    color: #333333;
+    font-weight: bold;
+}
+
+.about .content .info .left-info {
+    float: left;
+    width: 40%;
+}
+
+.about .content .info .right-info {
+    float: left;
+}
+
+.about .content button {
+    background-color: #ff305b;
+    text-align: center;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.about .content button:hover {
+    background: #EC2403;
+}
+
+
+.about .content button img {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.about .content .download {
+    margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+    .about .img-box {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .img-box .bg-border {
+        display: none;
+    }
+
+    .img-box .profile-photo {
+        width: 100%;
+    }
+
+    .about .content {
+        width: 100%;
+        padding: 10px 0px 0px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .img-box .bg-border {
+        display: none;
+    }
+}
+
+/* ===================================>>>>> Start Our Services <<<<<===============================*/
+.service {
+    padding: 60px 0px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.service .box {
+    float: left;
+    width: 25%;
+    transition: .5s all;
+    margin-bottom: 20px;
+}
+
+.service .box:hover {
+    background-color: #ffffff;
+    box-shadow: 0 15px 20px rgb(0 0 0 / 10%);
+}
+
+.service .box img {
+    transition: .4s;
+}
+
+.service .box:hover img {
+    transform: scale(1.15);
+}
+
+.service .box h3 {
+    color: #333;
+    margin: 15px 0px;
+    font-weight: 400;
+}
+
+.service .box p {
+    color: #555555;
+    line-height: 1.5;
+    padding: 15px;
+}
+
+@media (max-width: 767px) {
+    .service .box {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .service .box {
+        width: 50%;
+    }
+}
+
+/* ===================================>>>>> Start Our Portfolio <<<<<===============================*/
+
+.portfolio {
+    padding: 60px 0px;
+    text-align: center;
+}
+
+.portfolio ul.tabs {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.portfolio ul.tabs li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.portfolio ul.tabs li a {
+    color: #555555;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.portfolio ul.tabs li a.active,
+.portfolio ul.tabs li:hover>a {
+    color: #ff305b;
+}
+
+.portfolio .box {
+    position: relative;
+    float: left;
+    width: 33.3%;
+    border: 10px solid #fff;
+}
+
+.portfolio .box>img {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.portfolio .box>.overlay {
+    opacity: 0;
+    transition: .5s;
+}
+
+.portfolio .box .overlay>img {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+}
+
+.portfolio .box:hover>.overlay {
+    opacity: 1;
+    display: block;
+}
+
+
+@media (max-width: 767px) {
+    .portfolio ul.tabs li:nth-child(4) {
+        width: 100%;
+        padding: 0;
+    }
+
+    .portfolio ul.tabs li a {
+        font-size: 16px;
+    }
+
+    .portfolio .box {
+        width: 100%;
+        margin-bottom: 20px;
+        border: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .portfolio .box {
+        width: 50%;
+    }
+}
+
+/* ===================================>>>>> Start Status <<<<<===============================*/
+.status {
+    padding: 60px 0px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.status-box {
+    float: left;
+    width: 25%;
+}
+
+.status-box .num {
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+.status-box .caption {
+    color: #555555;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .status-box {
+        float: left;
+        width: 100%;
+        margin: 20px 0px;
+    }
+}
+
+/* ===================================>>>>> Start Client's Feedback <<<<<===============================*/
+
+.feedback {
+    padding: 60px 0px;
+}
+
+.feedback .client {
+    background-color: #f1f1f1;
+    width: 60%;
+    margin: auto;
+    padding: 35px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.feedback .client-photo {
+    float: left;
+    width: 20%;
+    position: relative;
+}
+
+.feedback .client-photo .bg-red {
+    width:400px;
+    height: 200px;
+    background-color: #ff305b;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: -200px;
+    top: -150px;
+}
+
+.feedback .client-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.feedback .client-info {
+    float: right;
+    width: 80%;
+}
+
+.feedback .client-info h2 {
+    color: #333;
+}
+
+.feedback .client-info .locate {
+    color: #555555;
+    margin-top: 10px;
+}
+
+.feedback .client-info .locate img {
+    vertical-align: middle;
+    color: #555555;
+}
+
+.feedback .client-info .text {
+    margin: 15px 0px;
+    color: #555555;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.feedback .padgenation {
+    margin: 10px auto 0px;
+    text-align: center;
+}
+
+.feedback .padge1 {
+    display: inline-block;
+    width: 20px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #ff305b;
+    margin-right: 4px;
+}
+
+.feedback .padge2 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #ff305b;
+}
+
+
+@media (max-width:767px) {
+    .feedback .client {
+        width: 100%;
+        padding: 30px 15px;
+    }
+
+    .feedback .client-photo {
+        width: 50%;
+        text-align: center;
+    }
+
+    .feedback .client-info {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .feedback .client-photo .bg-red {
+        left: -190px;
+        top: -120px;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    .feedback .client {
+        width: 100%;
+        padding: 40px;
+    }
+}
+
+/* ===================================>>>>> Start Our Blog <<<<<===============================*/
+.blog {
+    padding: 60px 0px;
+    background-color: #f1f1f1;
+}
+
+.blog .blog-box {
+    float: left;
+    width: 33.3%;
+    background-color: #fff;
+    border: 10px solid #f1f1f1;
+}
+
+
+.blog .blog-box img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.blog .blog-box .blog-content {
+    padding: 10px;
+}
+
+
+.blog .blog-box .date {
+    margin: 0px 0px 15px;
+    color: #555555;
+
+}
+
+.blog .blog-box h4 {
+    color: #333;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+.blog .blog-box h4:hover,
+.blog .blog-box a:hover {
+    color: #EC2403;
+    border-color: transparent;
+}
+
+.blog .blog-box .text {
+    color: #555555;
+    margin: 15px 0px;
+    line-height: 1.7;
+}
+
+.blog .blog-box a {
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    color: #333333;
+    font-weight: 600;
+    transition: .5s;
+    border: 1px solid #5555;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+
+@media (max-width:767px) {
+    .blog .blog-box {
+        width: 100%;
+        border: none;
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width:767px) and (max-width:992px) {
+    .blog .blog-box {
+        border: 5px solid #f1f1f1;
+    }
+
+    .blog .blog-box h4 {
+        font-size: 16px;
+    }
+
+    .blog .blog-box .text {
+        font-size: 14px;
+    }
+}
+
+/* ===================================>>>>> Start Contact US <<<<<===============================*/
+.contact {
+    padding: 60px 0px;
+}
+
+.contact form {
+    width: 60%;
+    margin: auto;
+}
+
+.input,
+.contact form .message {
+    padding: 5px 10px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: transparent;
+    transition: .5s;
+}
+
+input:focus,
+.contact form .message:focus {
+    outline: 1px solid #ff305b;
+}
+
+.contact form .name,
+.contact form .mail {
+    width: 48%;
+    float: left;
+    height: 40px;
+}
+
+.contact form .mail {
+    float: right;
+}
+
+.contact form .subject,
+.contact form .message {
+    float: left;
+    width: 100%;
+}
+
+.contact form .subject {
+    height: 40px;
+}
+
+.contact form .message {
+    height: 100px;
+    height: 90px;
+}
+
+.contact form .submit {
+    background-color: #ff305b;
+    border: none;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 6px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.contact form .submit:hover {
+    background-color: #EC2403;
+}
+
+@media (max-width: 767px) {
+    .contact form {
+        width: 100%;
+    }
+
+    .contact form .input {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .contact form {
+        width: 100%;
+    }
+}
+
+/* ===================================>>>>> Start Footer <<<<<===============================*/
+.footer {
+    padding: 50px 0px;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+
+.footer p a {
+    color: #ff305b;
+}
+
+.footer p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        padding: 30px 0px;
+    }
+}
+
+/* ===================================>>>>>The End <<<<<===============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* from 0 to 767 */
+@media (max-width: 767px) {}
+
+/* from 768 to next min */
+@media (min-width: 768px) {}
+
+/* from 992 to next min */
+@media (min-width: 992px) {}
+
+/* from 1200 to ...... */
+@media (min-width: 1200px) {}
