@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Roboto", sans-serif;
 }
@@ -210,6 +214,7 @@ nav button img {
 }
 
 @media (max-width: 767px) {
+
     .home .info h2 {
         font-size: 18px;
     }
